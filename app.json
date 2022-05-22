@@ -1,0 +1,24 @@
+{
+  "name": "uniquify-bot",
+  "description": "Telegram bot to remove duplicate media from a chat",
+  "keywords": ["telegram", "duplicate", "media", "removing", "bot"],
+  "logo": "https://img.apksum.com/4c/com.duplicate.files.remover.duplicatefinderfiles/1.0/icon.png",
+  "website": "https://github.com/OxMohsen/uniquify-bot",
+  "repository": "https://github.com/OxMohsen/uniquify-bot",
+  "env": {
+        "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
+        "TG_BOT_TOKEN": {"description": "Get bot token from @BotFather bot","required": true},
+        "TG_USER_SESSION": {"description": "String session from an admin user.","required": true},
+        "AUTH_USERS": {"description": "User ids of authorized users separated by space", "required": true}
+  },
+  "buildpacks": [
+    {"url": "heroku/python"}
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

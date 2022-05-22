@@ -1,0 +1,7 @@
+.vscode
+__pycache__
+lib
+config.py
+*.session
+log.txt
+.idea
