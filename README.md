@@ -139,4 +139,4 @@ Project Link: [https://github.com/OxMohsen/uniquify-bot](https://github.com/OxMo
 [issues-shield]: https://img.shields.io/github/issues/OxMohsen/uniquify-bot.svg?style=for-the-badge
 [issues-url]: https://github.com/OxMohsen/uniquify-bot/issues
 [license-shield]: https://img.shields.io/github/license/OxMohsen/uniquify-bot.svg?style=for-the-badge
-[license-url]: https://github.com/OxMohsen/uniquify-bot/blob/master/LICENSE
+[license-url]: https://github.com/OxMohsen/uniquify-bot/blob/main/LICENSE
