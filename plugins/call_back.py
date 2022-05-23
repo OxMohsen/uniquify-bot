@@ -24,11 +24,13 @@ async def back_button(b: Bot, cb: CallbackQuery):
 
 @Client.on_callback_query(filters.regex(r"^close_btn$"))
 async def close_button(b: Bot, cb: CallbackQuery):
+    await cb.answer()
     await cb.message.delete()
 
 
 @Client.on_callback_query(filters.regex(r"^cancel_btn$"))
 async def cancel_button(b: Bot, cb: CallbackQuery):
+    await cb.answer()
     id = int(cb.from_user.id)
     try:
         purge_status.pop(id)

@@ -8,7 +8,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from support.buttons import reply_markup_cancel, reply_markup_close, reply_markup_start
 
-if exists("./../config.py"):
+if exists("config.py"):
     from config import Config
 else:
     from sample_config import Config
@@ -47,10 +47,12 @@ async def config_chat(c: Bot, m: Message):
         me = await c.USER.get_me()
         try:
             status = await c.USER.get_chat_member(int(chat_id), me.id)
+            privileges = getattr(status, "privileges")
+            can_delete_messages = getattr(privileges, "can_delete_messages", False)
         except Exception:
             await msg.edit(Presets.NOT_IN_CHAT, reply_markup=reply_markup_close)
             return
-        if status.privileges.can_delete_messages:
+        if can_delete_messages:
             chat[id] = int(chat_id)
             await msg.edit(Presets.CHAT_ID_CNF.format(chat_id))
         else:

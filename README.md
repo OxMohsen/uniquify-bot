@@ -94,8 +94,7 @@ To get a local copy up and running follow these simple example steps.
 if you using heroku, you can run the bot with the following steps.
 1. get your `api_id` and `api_hash` in [https://my.telegram.org](https://my.telegram.org)
 2. create a new bot in [https://t.me/botfather](https://t.me/botfather)
-3. get your user session string from [pyrogram-session-maker](https://replit.com/@ayrahikari/pyrogram-session-maker)
-4. press the folowing button:
+3. press the following button:
     <br><a href="https://heroku.com/deploy?template=https://github.com/OxMohsen/uniquify-bot">
     <img height="30px" src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku">
     </a>
