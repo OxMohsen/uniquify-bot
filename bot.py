@@ -1,6 +1,12 @@
+from os.path import exists
+
 from pyrogram import Client, enums
 
-from config import LOGGER, Config
+if exists("config.py"):
+    from config import LOGGER, Config
+else:
+    from sample_config import LOGGER, Config
+
 from user import User
 
 
@@ -23,7 +29,9 @@ class Bot(Client):
         await super().start()
         usr_bot_me = await self.get_me()
         self.set_parse_mode(enums.ParseMode.HTML)
-        self.LOGGER(__name__).info(f"Bot {usr_bot_me.first_name} (@{usr_bot_me.username}) started!")
+        self.LOGGER(__name__).info(
+            f"Bot {usr_bot_me.first_name} (@{usr_bot_me.username}) started!"
+        )
         self.USER, self.USER_ID = await User().start()
 
     async def stop(self, *args):
