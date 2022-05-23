@@ -1,12 +1,17 @@
 import asyncio
+from os.path import exists
 
 from bot import Bot
-from config import Config
 from presets import Presets
-from pyrogram import filters, enums
+from pyrogram import enums, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from support.buttons import reply_markup_cancel, reply_markup_close, reply_markup_start
+
+if exists("./../config.py"):
+    from config import Config
+else:
+    from sample_config import Config
 
 purge_status = {}
 chat = {}
