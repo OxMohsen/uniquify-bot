@@ -23,8 +23,11 @@ class Config(object):
     # Authorized users to use this bot
     AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
 
-    # Generate a user session string
-    TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "oxmohsen")
+    # session name
+    TG_USER_SESSION_NAME = os.environ.get("TG_USER_SESSION_NAME", "oxmohsen")
+
+    # tg user session string
+    TG_USER_SESSION_STRING = os.environ.get("TG_USER_SESSION_STRING", "")
 
 
 def LOGGER(name: str) -> logging.Logger:

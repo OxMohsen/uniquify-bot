@@ -9,7 +9,8 @@
         "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
         "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
         "TG_BOT_TOKEN": {"description": "Get bot token from @BotFather bot","required": true},
-        "TG_USER_SESSION": {"description": "String session from an admin user.","required": true},
+        "TG_USER_SESSION_NAME": {"description": "Session name","required": false},
+        "TG_USER_SESSION_STRING": {"description": "Session string of user bot","required": false},
         "AUTH_USERS": {"description": "User ids of authorized users separated by space", "required": true}
   },
   "buildpacks": [

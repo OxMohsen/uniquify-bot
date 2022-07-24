@@ -11,10 +11,11 @@ else:
 class User(Client):
     def __init__(self):
         super().__init__(
-            Config.TG_USER_SESSION,
+            Config.TG_USER_SESSION_NAME,
             api_hash=Config.API_HASH,
             api_id=Config.APP_ID,
             workers=8,
+            session_string=Config.TG_USER_SESSION_STRING
         )
         self.LOGGER = LOGGER
 
